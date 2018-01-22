@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">GameCounter1</string>
+    <string name="match">Qual</string>
+    <string name="team">Team</string>
+
+    <!-- Menus -->
+    <string name="menu1">Autonomous</string>  <!-- Start new match -->
+    <string name="menu2">Tele-Op</string>
+    <string name="menu3">End Match and Advance</string>     <!-- End match-->
+    <string name="menu4">Program Device Matches</string>
+    <string name="menu5">Download Data</string>
+
+    <!-- Menu Navigation Labels -->
+    <string name="prev_lbl">Prev</string>
+    <string name="next_lbl">Next</string>
+    <string name="reset_lbl">Reset</string>
+    <string name="power_lbl">On/Off</string>
+
+    <!-- Menu Navigation Buttons -->
+    <string name="prev">n1</string>
+    <string name="next">n2</string>
+    <string name="reset">n3</string>
+    <string name="power">n4</string>
+
+    <!-- Special Function Labels -->
+    <string name="sf1_lbl">Switch</string>
+    <string name="sf2_lbl">Scale</string>
+    <string name="sf3_lbl">Line</string>
+    <string name="sf4_lbl">Penalty</string>
+    <string name="sf5_lbl">Xchnge</string>
+    <string name="sf6_lbl">Defend</string> <!-- Opponent's Switch or Scale -->
+    <!-- End Game Points -->
+    <string name="sf7_lbl">Park</string>
+    <string name="sf8_lbl">Climb</string>
+    <string name="sf9_lbl">Assists</string>  <!-- Assist teammate's climb -->
+    <string name="sf10_lbl">Penalty</string>
+    <string name="sf11_lbl">Cards</string>  <!-- Not used. Red Card or Yellow Card -->
+
+    <!-- Special Function Buttons -->
+    <string name="b1">s1</string>
+    <string name="b2">s2</string>
+    <string name="b3">s3</string>
+    <string name="b4">s4</string>
+
+    <!-- Mode Status -->
+    <string name="auto">Auto</string>
+    <string name="tele">Tele</string>
+
+    <!-- Display Row 1 (16 char) -->
+    <string name="blankDisplay">0000</string>
+
+</resources>
