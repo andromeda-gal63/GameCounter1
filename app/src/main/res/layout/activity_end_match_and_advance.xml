@@ -48,183 +48,136 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Display Label-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:paddingLeft="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_marginLeft="20dp"
-            android:paddingLeft="10dp"
-            android:text="@string/match"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_marginLeft="20dp"
-            android:paddingLeft="10dp"
-            android:text="@string/team"/>
-    </LinearLayout>
-
     <!-- Display Screen -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@color/displayBG"
         android:layout_margin="10dp"
         android:padding="10dp">
 
-        <!-- Row 1 -->
+        <!-- Column 1 : Park -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/r11"
+                android:id="@+id/c11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:paddingStart="6dp"
-                android:paddingEnd="10dp"
-                android:textAlignment="center"
                 android:layout_weight="1"
-                android:text="       1:1"/>
+                android:textSize="30sp"
+                android:text="@string/blankDisplay"/>
             <TextView
-                android:id="@+id/r12"
+                android:id="@+id/c12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
                 android:layout_weight="1"
-                android:textAlignment="center"
-                android:text="5518"/>
+                android:textSize="30sp"
+                android:text="Park"/>
         </LinearLayout>
 
-        <!-- Row 2 -->
+        <!-- Column 2 : Climb -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/r21"
+                android:id="@+id/c21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="30sp"
                 android:text="@string/blankDisplay"/>
             <TextView
-                android:id="@+id/r22"
+                android:id="@+id/c22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
                 android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="Clim"/>
+        </LinearLayout>
+
+        <!-- Column 3 : Exchange -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/c31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="30sp"
                 android:text="@string/blankDisplay"/>
             <TextView
-                android:id="@+id/r23"
+                android:id="@+id/c32"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
                 android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="Asst"/>
+        </LinearLayout>
+
+        <!-- Column 4 : Penalty -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/c41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="30sp"
                 android:text="@string/blankDisplay"/>
             <TextView
-                android:id="@+id/r24"
+                android:id="@+id/c42"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
                 android:layout_weight="1"
-                android:text="@string/blankDisplay"/>
+                android:textSize="30sp"
+                android:text="Pnlt"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Special Function Buttons and Labels -->
+    <!-- Special Function Buttons -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/b1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/sf7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:text="@string/sf7_lbl"/>
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/b1"
-                android:onClick="incrementSF1"/>
-        </LinearLayout>
+            android:onClick="incrementSF1"
+            android:text="@string/b1" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/b2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/sf8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:text="@string/sf8_lbl"/>
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/b2"
-                android:onClick="incrementSF2"/>
-        </LinearLayout>
+            android:onClick="incrementSF2"
+            android:text="@string/b2" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/b3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/sf9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:text="@string/sf9_lbl"/>
-            <Button
-                android:id="@+id/b3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/b3"
-                android:onClick="incrementSF3"/>
-        </LinearLayout>
+            android:onClick="incrementSF3"
+            android:text="@string/b3" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/b4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/sf10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:text="@string/sf10_lbl"/>
-            <Button
-                android:id="@+id/b4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/b4"
-                android:onClick="incrementSF4"/>
-        </LinearLayout>
+            android:onClick="incrementSF4"
+            android:text="@string/b4" />
     </LinearLayout>
 
     <!-- Menu Navigation Buttons and Labels -->
@@ -236,7 +189,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="30dp">
             <TextView
                 android:id="@+id/labelPrev"
                 android:layout_width="match_parent"
@@ -255,7 +209,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="30dp">
             <TextView
                 android:id="@+id/labelNext"
                 android:layout_width="match_parent"
@@ -274,7 +229,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="30dp">
             <TextView
                 android:id="@+id/labelReset"
                 android:layout_width="match_parent"
@@ -293,7 +249,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="30dp">
             <TextView
                 android:id="@+id/labelPower"
                 android:layout_width="wrap_content"
@@ -301,7 +258,7 @@
                 android:textSize="20sp"
                 android:layout_margin="10dp"
                 android:textAlignment="center"
-                android:text="@string/power_lbl"/>
+                android:text="@string/remind_lbl"/>
             <Button
                 android:id="@+id/power"
                 android:layout_width="wrap_content"

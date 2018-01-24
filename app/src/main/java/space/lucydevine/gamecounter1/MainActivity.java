@@ -54,19 +54,35 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+        // Menu: RECALL -> Remind.
+        TextView remindMenu = (TextView)findViewById(R.id.power);
+        remindMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent remindMenu = new Intent(MainActivity.this, RemindActivity.class);
+                startActivity(remindMenu);
+            }
+        });
     }
 
     /**
      * Setters to increment the counts for these special functions.
      */
     public void incrementSF1(View view){
-        sf1 = sf1 + 1;
-        TextView sf = (TextView)findViewById(R.id.r21);
+        //sf1 = sf1 + 1;
+        if (sf1 == 0){
+            sf1 =+ 1;
+        }
+        TextView sf = (TextView)findViewById(R.id.c11);
         sf.setText(String.format("% 4d", sf1));
     }
     public void incrementSF2(View view){
-        sf2 = sf2 + 1;
-        TextView sf = (TextView)findViewById(R.id.r22);
+        //sf2 = sf2 + 1;
+        if (sf2 == 0){
+            sf2 =+ 1;
+        }
+        TextView sf = (TextView)findViewById(R.id.c21);
         sf.setText(String.format("% 4d", sf2));
     }
     public void incrementSF3(View view){
@@ -74,13 +90,13 @@ public class MainActivity extends AppCompatActivity {
         if (sf3 == 0){
             sf3 =+ 1;
         }
-        TextView sf = (TextView)findViewById(R.id.r23);
+        TextView sf = (TextView)findViewById(R.id.c31);
         sf.setText(String.format("% 4d", sf3));
     }
     public void incrementSF4(View view){
         //sf4 = sf4 + 1;
         sf4 = 0;  // Unused for PowerUps/Auto.
-        TextView sf = (TextView)findViewById(R.id.r24);
+        TextView sf = (TextView)findViewById(R.id.c41);
         sf.setText(String.format("% 4d", sf4));
     }
 

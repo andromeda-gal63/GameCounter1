@@ -43,6 +43,16 @@ public class CountTeleOp extends AppCompatActivity {
                 startActivity(prevMenuIntent);
             }
         });
+
+        // Menu: RECALL -> Remind.
+        TextView remindMenu = (TextView)findViewById(R.id.power);
+        remindMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent remindMenu = new Intent(CountTeleOp.this, RemindActivity.class);
+                startActivity(remindMenu);
+            }
+        });
     }
 
     /**
@@ -50,22 +60,22 @@ public class CountTeleOp extends AppCompatActivity {
      */
     public void incrementSF1(View view){
         sf1 = sf1 + 1;
-        TextView sf = (TextView)findViewById(R.id.r21);
+        TextView sf = (TextView)findViewById(R.id.c11);
         sf.setText(String.format("% 4d", sf1));
     }
     public void incrementSF2(View view){
         sf2 = sf2 + 1;
-        TextView sf = (TextView)findViewById(R.id.r22);
+        TextView sf = (TextView)findViewById(R.id.c21);
         sf.setText(String.format("% 4d", sf2));
     }
     public void incrementSF3(View view){
         sf3 = sf3 + 1;
-        TextView sf = (TextView)findViewById(R.id.r23);
+        TextView sf = (TextView)findViewById(R.id.c31);
         sf.setText(String.format("% 4d", sf3));
     }
     public void incrementSF4(View view){
         sf4 = sf4 + 1;
-        TextView sf = (TextView)findViewById(R.id.r24);
+        TextView sf = (TextView)findViewById(R.id.c41);
         sf.setText(String.format("% 4d", sf4));
     }
 

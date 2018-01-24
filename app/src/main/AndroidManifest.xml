@@ -21,7 +21,12 @@
         <activity
             android:name=".ProgramDevice"
             android:label="@string/menu4" />
-        <activity android:name=".EndMatchAndAdvance" android:label="@string/menu3"></activity>
+        <activity
+            android:name=".EndMatchAndAdvance"
+            android:label="@string/menu3" />
+        <activity
+            android:name=".RemindActivity"
+            android:label="Remind"></activity>
     </application>
 
 </manifest>

@@ -6,12 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import static space.lucydevine.gamecounter1.R.id.r23;
-import static space.lucydevine.gamecounter1.R.id.sf1;
-import static space.lucydevine.gamecounter1.R.id.sf2;
-import static space.lucydevine.gamecounter1.R.id.sf3;
-import static space.lucydevine.gamecounter1.R.id.sf4;
-
 public class EndMatchAndAdvance extends AppCompatActivity {
     int sf1, sf2, sf3, sf4 = 0;
     int fieldLen = 4;
@@ -49,6 +43,16 @@ public class EndMatchAndAdvance extends AppCompatActivity {
                 startActivity(prevMenuIntent);
             }
         });
+
+        // Menu: RECALL -> Remind.
+        TextView remindMenu = (TextView)findViewById(R.id.power);
+        remindMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent remindMenu = new Intent(EndMatchAndAdvance.this, RemindActivity.class);
+                startActivity(remindMenu);
+            }
+        });
     }
 
 
@@ -64,10 +68,10 @@ public class EndMatchAndAdvance extends AppCompatActivity {
         sf1 = 1;
 
         // Update both counters.
-        TextView sfView1 = (TextView)findViewById(R.id.r21);
+        TextView sfView1 = (TextView)findViewById(R.id.c11);
         sfView1.setText(String.format("% 4d", sf1));
 
-        TextView sfView2 = (TextView)findViewById(R.id.r22);
+        TextView sfView2 = (TextView)findViewById(R.id.c21);
         sfView2.setText(String.format("% 4d", sf2));
     }
     public void incrementSF2(View view){
@@ -79,10 +83,10 @@ public class EndMatchAndAdvance extends AppCompatActivity {
         sf2 = 1;
 
         // Update both counters.
-        TextView sfView2 = (TextView)findViewById(R.id.r22);
+        TextView sfView2 = (TextView)findViewById(R.id.c21);
         sfView2.setText(String.format("% 4d", sf2));
 
-        TextView sfView1 = (TextView)findViewById(R.id.r21);
+        TextView sfView1 = (TextView)findViewById(R.id.c11);
         sfView1.setText(String.format("% 4d", sf1));
     }
     public void incrementSF3(View view){
@@ -90,12 +94,12 @@ public class EndMatchAndAdvance extends AppCompatActivity {
         if (sf3 < 2){
             sf3 = sf3 + 1;
         }
-        TextView sf = (TextView)findViewById(R.id.r23);
+        TextView sf = (TextView)findViewById(R.id.c31);
         sf.setText(String.format("% 4d", sf3));
     }
     public void incrementSF4(View view){
         sf4 = sf4 + 1;
-        TextView sf = (TextView)findViewById(R.id.r24);
+        TextView sf = (TextView)findViewById(R.id.c41);
         sf.setText(String.format("% 4d", sf4));
     }
 
